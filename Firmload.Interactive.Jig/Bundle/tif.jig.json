@@ -1,0 +1,88 @@
+﻿{
+  "events": [
+    {
+      "family": "Test",
+      "name": "Begin",
+      "params": [
+        {
+          "name": "barcode",
+          "type": "ascii",
+          "tags": [ "value" ]
+        }
+      ],
+      "protocol": [],
+      "tags": [ "read:barcode" ]
+    },
+    {
+      "family": "Request",
+      "name": "ReadRpm",
+      "params": [],
+      "protocol": [],
+      "tags": []
+    }
+  ],
+  "methods": [
+    {
+      "description": "Used for JIG-keep alive",
+      "family": "System",
+      "command": "DeviceInfo",
+      "tags": [],
+      "outParams": [],
+      "inParams": [],
+      "protocol": []
+    },
+    {
+      "description": "Invoked by Firmload when a test have finished executing (or failed to start).",
+      "family": "Test",
+      "command": "Ended",
+      "outParams": [],
+      "inParams": [
+        {
+          "name": "success",
+          "type": "bool"
+        },
+        {
+          "name": "result",
+          "type": "ascii"
+        }
+      ],
+      "protocol": []
+    },
+    {
+      "description": "Invoked by Firmload when a test have begun executing. After this method have been called it is safe to start sending events to the bundle",
+      "family": "Test",
+      "command": "Started",
+      "outParams": [],
+      "inParams": [
+        {
+          "name": "bundle",
+          "type": "ascii"
+        }
+      ],
+      "protocol": []
+    },
+
+    {
+      "description": "Notify the connected jig (remote client) that it can start sending events.",
+      "family": "Bundle",
+      "command": "Ready",
+      "outParams": [],
+      "inParams": [],
+      "protocol": []
+    },
+    {
+      "description": "Example response command",
+      "family": "Response",
+      "command": "ReadRpm",
+      "tags": [],
+      "outParams": [],
+      "inParams": [
+        {
+          "name": "value",
+          "type": "sint32"
+        }
+      ],
+      "protocol": []
+    }
+  ]
+}

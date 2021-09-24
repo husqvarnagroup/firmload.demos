@@ -1,0 +1,22 @@
+﻿{
+  "name": "Firmload interactive jig",
+  "sequence": [
+    {
+      "file": "script.py",
+      "methods": [
+        "FirstTest",
+        "WaitForJig",
+        "LastTest"
+      ]
+    }
+  ],
+  "metadata": {
+    "articleNumber": "0",
+    "origin": "",
+    "version": "1.0.0.0",
+    "uniqueDescriptiveName": "Firmload interactive jig 1.0.0.0",
+    "supportedDevices": [
+      "123456789"
+    ]
+  }
+}

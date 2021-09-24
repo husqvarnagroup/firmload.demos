@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31710.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Firmload.Interactive.Jig", "Firmload.Interactive.Jig\Firmload.Interactive.Jig.csproj", "{8AB560C4-8AB0-480E-BD89-9BC723FE245B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Firmload.Minimal.Jig", "Firmload.Minimal.Jig\Firmload.Minimal.Jig.csproj", "{6456F1D2-E4B0-4C12-9096-F15370E91F69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{51A8D013-BD61-4FFE-A533-7C6BA2381E63}"
+	ProjectSection(SolutionItems) = preProject
+		postbuild.ps1 = postbuild.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AB560C4-8AB0-480E-BD89-9BC723FE245B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB560C4-8AB0-480E-BD89-9BC723FE245B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB560C4-8AB0-480E-BD89-9BC723FE245B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB560C4-8AB0-480E-BD89-9BC723FE245B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6456F1D2-E4B0-4C12-9096-F15370E91F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6456F1D2-E4B0-4C12-9096-F15370E91F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6456F1D2-E4B0-4C12-9096-F15370E91F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6456F1D2-E4B0-4C12-9096-F15370E91F69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2B1BF73-68DC-4C64-AE2E-8B830FAB1E3F}
+	EndGlobalSection
+EndGlobal

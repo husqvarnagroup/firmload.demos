@@ -1,0 +1,21 @@
+﻿{
+  "name": "Firmload minmal jig",
+  "sequence": [
+    {
+      "file": "script.py",
+      "methods": [
+        "FirstTest",
+        "LastTest"
+      ]
+    }
+  ],
+  "metadata": {
+    "articleNumber": "0",
+    "origin": "",
+    "version": "1.0.0.0",
+    "uniqueDescriptiveName": "Firmload minimal jig 1.0.0.0",
+    "supportedDevices": [
+      "123456789"
+    ]
+  }
+}

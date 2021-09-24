@@ -1,0 +1,14 @@
+﻿{
+  "events": [],
+  "methods": [
+    {
+      "description": "Use to mock product interface",
+      "family": "system",
+      "command": "ping",
+      "tags": [],
+      "outParams": [],
+      "inParams": [],
+      "protocol": []
+    }
+  ]
+}
