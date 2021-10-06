@@ -18,6 +18,8 @@ namespace Firmload.DemoClient
         private static int Main(string[] args)
         {
             var pnc = "100000000";
+
+            // Pick bundle based on pnc
             var result = App.RunBundle(pnc, int.MaxValue).GetAwaiter().GetResult();
 
             if(result.TryGetValue("passed", out var passed) && bool.Parse(passed.ToString()))

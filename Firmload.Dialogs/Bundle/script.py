@@ -12,8 +12,7 @@ def CallbackDialogs():
 
 def InstructionDialogs():
 	# Full dialog
-
-	tifDialogs.ShowInstruction("Manual input", "Please perform an important action then press Confirm.", "./instruction.png")
+tifDialogs.ShowInstruction("Manual input", "Please perform an important action then press Confirm.", "./instruction.png")
 
 	# Invalid image url example
 	tifDialogs.ShowInstruction("Icon test", "Bad image url", "./bad-url.png")
@@ -21,8 +20,6 @@ def InstructionDialogs():
 	# No image specified
 	tifDialogs.ShowInstruction("Icon test", "No image url")
 
-
-	#public dynamic ShowInputDialog(string title, string description, string mediaResource)
 def InputDialogs():
 	# Shows a dialog where the user may enter a value manually
 	result = tifDialogs.ShowInputDialog("Input dialog", "Please enter a value in the textbox below.", "./face.png")
