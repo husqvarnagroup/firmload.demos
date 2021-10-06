@@ -1,0 +1,45 @@
+﻿{
+  "events": [
+    {
+      "family": "Test",
+      "name": "Begin",
+      "params": [
+        {
+          "name": "barcode",
+          "type": "ascii",
+          "tags": [ "value" ]
+        }
+      ],
+      "protocol": [],
+      "tags": [ "read:barcode" ]
+    }
+  ],
+  "methods": [
+    {
+      "description": "Used for JIG-keep alive",
+      "family": "System",
+      "command": "DeviceInfo",
+      "tags": [],
+      "outParams": [],
+      "inParams": [],
+      "protocol": []
+    },
+    {
+      "description": "Invoked by Firmload when a test have finished executing (or failed to start).",
+      "family": "Test",
+      "command": "Ended",
+      "outParams": [],
+      "inParams": [
+        {
+          "name": "success",
+          "type": "bool"
+        },
+        {
+          "name": "result",
+          "type": "ascii"
+        }
+      ],
+      "protocol": []
+    }
+  ]
+}

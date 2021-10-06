@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Firmload.DemoClient
+namespace Firmload.IO.Jig
 {
 
     [JsonObject(MemberSerialization = MemberSerialization.OptIn)]

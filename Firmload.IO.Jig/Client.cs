@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Firmload.DemoClient
+namespace Firmload.IO.Jig
 {
     public class SocketClient
     {

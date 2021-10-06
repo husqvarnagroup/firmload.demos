@@ -1,0 +1,22 @@
+﻿{
+  "name": "Firmload dialogs",
+  "sequence": [
+    {
+      "file": "script.py",
+      "methods": [
+        "InstructionDialogs",
+        "InputDialogs",
+        "CallbackDialogs"
+      ]
+    }
+  ],
+  "metadata": {
+    "articleNumber": "0",
+    "origin": "",
+    "version": "1.0.0.0",
+    "uniqueDescriptiveName": "Firmload dialogs 1.0.0.0",
+    "supportedDevices": [
+      "1000000000"
+    ]
+  }
+}

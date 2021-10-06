@@ -6,7 +6,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1-beta1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Firmload.IO.Jig\Firmload.IO.Jig.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
