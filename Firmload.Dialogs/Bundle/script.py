@@ -12,7 +12,7 @@ def CallbackDialogs():
 
 def InstructionDialogs():
 	# Full dialog
-tifDialogs.ShowInstruction("Manual input", "Please perform an important action then press Confirm.", "./instruction.png")
+	tifDialogs.ShowInstruction("Manual input", "Please perform an important action then press Confirm.", "./instruction.png")
 
 	# Invalid image url example
 	tifDialogs.ShowInstruction("Icon test", "Bad image url", "./bad-url.png")

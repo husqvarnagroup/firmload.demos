@@ -18,7 +18,12 @@ namespace Firmload.IO.Jig
         private TifElement _response = null;
         private string _pendingElement = "";
 
-        public static async Task<JObject> RunBundle(string bundlePnc, int timeout)
+        public static async Task<JObject> RunBundle(Uri qrCode, int timeout)
+        {
+            return await OnRunBundle(qrCode.ToString(), timeout);
+        }
+
+        private static async Task<JObject> OnRunBundle(string qrCode, int timeout)
         {
             var app = new App();
 
@@ -30,8 +35,9 @@ namespace Firmload.IO.Jig
 
             try
             {
-                return await app.Start(bundlePnc, timeout);
-            } finally
+                return await app.Start(qrCode, timeout);
+            }
+            finally
             {
                 app._client.BytesReceived -= app.OnBytesReceived;
                 app._converter.OnError -= OnError;
@@ -40,16 +46,26 @@ namespace Firmload.IO.Jig
                 app._client?.Close();
             }
         }
+
+        public static async Task<JObject> RunBundleRaw(string qrcode, int timeout)
+        {
+            return await OnRunBundle(qrcode, timeout);
+        }
+
+        public static async Task<JObject> RunBundle(string pnc, int timeout)
+        {
+            return await OnRunBundle($"https://hqr.codes?pnc={pnc}", timeout);
+        }
         /// <summary>
         /// Main loop
         /// 1. Sent qr-code to firmloade result
         /// </summary>
-        private async Task<JObject> Start(string pnc, int timeout)
+        private async Task<JObject> Start(string qrCode, int timeout)
         {
             await _client.OpenAsync(IPAddress.Parse("127.0.0.1"), 51511);
 
             // Start execution by sending a barcode
-            SendEvent("Test", "Begin", $"https://hqr.codes?pnc={pnc}");
+            SendEvent("Test", "Begin", qrCode);
 
             try
             {

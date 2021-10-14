@@ -1,0 +1,20 @@
+﻿{
+  "name": "Firmload output",
+  "sequence": [
+    {
+      "file": "script.py",
+      "methods": [
+        "AddParts"
+      ]
+    }
+  ],
+  "metadata": {
+    "articleNumber": "0",
+    "origin": "",
+    "version": "1.0.0.0",
+    "uniqueDescriptiveName": "Firmload output demo",
+    "supportedDevices": [
+      "2000000000"
+    ]
+  }
+}
