@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
@@ -9,17 +9,27 @@
 		<ProjectReference Include="..\Firmload.IO.Jig\Firmload.IO.Jig.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<None Update="Bundle\tif.jig.json">
+		<None Update="Bundles\FullSettings\settings.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Bundles\FullSettings\tif.jig.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Bundles\FullSettings\tif.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Bundles\ProductSettings\tif.jig.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="Bundle\tif.json">
+		<None Update="Bundles\ProductSettings\tif.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="Bundle\settings.json">
+		<None Update="Bundles\ProductSettings\settings.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="(powershell -executionpolicy bypass -file $(SolutionDir)postbuild.ps1 $(ProjectDir) bundleSettings)" />
+		<Exec Command="(powershell -executionpolicy bypass -file $(SolutionDir)postbuild.ps1 $(ProjectDir) bundleFullSettings $(ProjectDir)\Bundles\FullSettings)" />
+		<Exec Command="(powershell -executionpolicy bypass -file $(SolutionDir)postbuild.ps1 $(ProjectDir) bundleProductSettings $(ProjectDir)\Bundles\ProductSettings)" />
 	</Target>
 </Project>

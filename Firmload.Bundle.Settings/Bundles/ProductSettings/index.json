@@ -1,5 +1,5 @@
 ﻿{
-  "name": "Firmload bundle settings",
+  "name": "Firmload bundle product settings",
   "sequence": [
     {
       "file": "script.py",
@@ -12,7 +12,7 @@
     "articleNumber": "0",
     "origin": "",
     "version": "1.0.0.0",
-    "uniqueDescriptiveName": "Firmload bundle settings",
+    "uniqueDescriptiveName": "Firmload bundle product settings",
     "supportedDevices": [
       "300000000"
     ]

@@ -1,13 +1,13 @@
 ﻿param(
     [string]$workingDir,
-    [string]$bundleName
+    [string]$bundleName,
+    [string]$bundleDir = "$($workingDir)\Bundle"
 )
 
 $tempDir = "$($workingDir)\temp"
 $binDir = "$($workingDir).\bin"
 $outputFile = "$($bundleName).zip";
 $firmloadDir = "c:\production-tools\bundles"
-$bundleDir = "$($workingDir)\Bundle"
 
 
 # Create or empty temp dir

@@ -1,0 +1,5 @@
+﻿{
+  "CommunicationType": 1,
+  "Protocol": "G4 CAN",
+  "Type": "Wheeled"
+}
